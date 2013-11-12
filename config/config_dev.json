@@ -2,7 +2,7 @@
     "server": {
         "debug": true,
         "accessLog": "/tmp/proxy2_access.log",
-        "port": 80,
+        "port": 8080,
         "workers": 2,
         "maxSockets": 100,
         "deadBackendTTL": 10,
@@ -13,6 +13,14 @@
         "lruCache": {
             "size": 5,
             "ttl": 5
+        },
+        "response": {
+        	"replaceHeader": {
+        		"Server" : "HIPACHE",
+        		"Author" : "TeStEr"
+        	}
         }
-    }
+    },
+    "redisHost": "192.168.1.107",
+    "redisPort": 6379    
 }
