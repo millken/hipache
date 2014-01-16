@@ -10,14 +10,15 @@
         "retryOnError": 3,
         "deadBackendOn500": true,
         "httpKeepAlive": false,
+        "servername": "HipacheServer",
+        "hostname": "Hs/153",
         "lruCache": {
             "size": 5,
             "ttl": 5
         },
         "response": {
         	"replaceHeader": {
-        		"Server" : "HIPACHE",
-        		"Author" : "TeStEr"
+        		"Server" : "HIPACHE"
         	}
         }
     },

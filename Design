@@ -1,0 +1,163 @@
+虚拟主机
+	动态绑定
+	虚拟主机ssl（SNI），独立ssl
+
+请求控制
+
+回应控制
+
+
+缓存
+	匹配规则缓存：url，扩展名，正则
+	缓存时间
+	强制缓存
+redis:setex(host:url, {header}, ttl)
+redis:setex(hash(host:url), body, ttl)
+永远在线则为set
+普通缓存
+
+NODE_PATH=/usr/lib/node_modules/hipache/node_modules/
+./bin/hipache -c config/config_dev.json
+
+
+worker.js
+proxyRequest -> 
+cache.js
+getBackendFromHostHeader
+
+->
+httpRequestHandler
+{ req: 
+   { _readableState: 
+      { highWaterMark: 16384,
+        buffer: [],
+        length: 0,
+        pipes: null,
+        pipesCount: 0,
+        flowing: false,
+        ended: false,
+        endEmitted: false,
+        reading: false,
+        calledRead: false,
+        sync: true,
+        needReadable: false,
+        emittedReadable: false,
+        readableListening: false,
+        objectMode: false,
+        defaultEncoding: 'utf8',
+        ranOut: false,
+        awaitDrain: 0,
+        readingMore: false,
+        decoder: null,
+        encoding: null },
+     readable: true,
+     domain: null,
+     _events: {},
+     _maxListeners: 10,
+     socket: 
+      { _connecting: false,
+        _handle: [Object],
+        _readableState: [Object],
+        readable: true,
+        domain: null,
+        _events: [Object],
+        _maxListeners: 10,
+        _writableState: [Object],
+        writable: true,
+        allowHalfOpen: true,
+        onend: [Function],
+        destroyed: false,
+        errorEmitted: false,
+        bytesRead: 2482,
+        _bytesDispatched: 159329,
+        _pendingData: null,
+        _pendingEncoding: '',
+        server: [Object],
+        _idleTimeout: 10000,
+        _idleNext: [Object],
+        _idlePrev: [Object],
+        _idleStart: 1384335219269,
+        parser: [Object],
+        ondata: [Function],
+        _paused: false,
+        _peername: [Object],
+        _httpMessage: [Object] },
+     connection: 
+      { _connecting: false,
+        _handle: [Object],
+        _readableState: [Object],
+        readable: true,
+        domain: null,
+        _events: [Object],
+        _maxListeners: 10,
+        _writableState: [Object],
+        writable: true,
+        allowHalfOpen: true,
+        onend: [Function],
+        destroyed: false,
+        errorEmitted: false,
+        bytesRead: 2482,
+        _bytesDispatched: 159329,
+        _pendingData: null,
+        _pendingEncoding: '',
+        server: [Object],
+        _idleTimeout: 10000,
+        _idleNext: [Object],
+        _idlePrev: [Object],
+        _idleStart: 1384335219269,
+        parser: [Object],
+        ondata: [Function],
+        _paused: false,
+        _peername: [Object],
+        _httpMessage: [Object] },
+     httpVersion: '1.1',
+     complete: false,
+     headers: 
+      { host: 'test.c.lo:8080',
+        'user-agent': 'Mozilla/5.0 (X11; Linux x86_64; rv:17.0) Gecko/20130917 Firefox/17.0',
+        accept: 'image/png,image/*;q=0.8,*/*;q=0.5',
+        'accept-language': 'zh-cn,en-us;q=0.7,en;q=0.3',
+        'accept-encoding': 'gzip, deflate',
+        connection: 'keep-alive',
+        referer: 'http://test.c.lo:8080/index_static/lhgdialog-4.2.0/lhgdialog/skins/default.css',
+        cookie: 'PHPSESSID=k7fursi28e17k5r6ipoi01j9o2' },
+     trailers: {},
+     _pendings: [],
+     _pendingIndex: 0,
+     url: '/index_static/lhgdialog-4.2.0/lhgdialog/skins/icons/loading.gif',
+     method: 'GET',
+     statusCode: null,
+     client: 
+      { _connecting: false,
+        _handle: [Object],
+        _readableState: [Object],
+        readable: true,
+        domain: null,
+        _events: [Object],
+        _maxListeners: 10,
+        _writableState: [Object],
+        writable: true,
+        allowHalfOpen: true,
+        onend: [Function],
+        destroyed: false,
+        errorEmitted: false,
+        bytesRead: 2482,
+        _bytesDispatched: 159329,
+        _pendingData: null,
+        _pendingEncoding: '',
+        server: [Object],
+        _idleTimeout: 10000,
+        _idleNext: [Object],
+        _idlePrev: [Object],
+        _idleStart: 1384335219269,
+        parser: [Object],
+        ondata: [Function],
+        _paused: false,
+        _peername: [Object],
+        _httpMessage: [Object] },
+     _consuming: false,
+     _dumped: false,
+     httpVersionMajor: 1,
+     httpVersionMinor: 1,
+     upgrade: false } }
+
